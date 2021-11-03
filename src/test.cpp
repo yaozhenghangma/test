@@ -9,4 +9,3 @@ int main() {
     std::cout << word << '\n'; // Will output "Hello"
     std::cout << result.string() << '\n';  // Will output " world!"
 }
-~
