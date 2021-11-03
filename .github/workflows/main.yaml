@@ -35,9 +35,11 @@ jobs:
           cd ..
           ls
           zip -r test.zip test
+          pwd
+          ls
 
       - name: Upload artifacts
         uses: 'actions/upload-artifact@v2'
         with:
           name: test.zip
-          path: test.zip
+          path: ../test.zip
