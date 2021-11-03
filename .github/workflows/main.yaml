@@ -21,7 +21,7 @@ jobs:
 
       - name: Install packages
         run: |
-          xrepo updata-repo
+          xrepo update-repo
           xrepo install -y cmake
           xrepo install -y scnlib
           xrepo export -o ./pkg
