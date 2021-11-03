@@ -1,0 +1,5 @@
+{
+    find_program_xcode_arch_x86_64_plat_macosx_checktoolcxx = {
+        ["xcrun -sdk macosx clang"] = "/usr/bin/xcrun -sdk macosx clang"
+    }
+}

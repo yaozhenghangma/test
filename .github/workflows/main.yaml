@@ -1,0 +1,41 @@
+name: release
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install xmake
+        run: brew install xmake
+
+      - name: Install packages
+        run: |
+          xrepo updata-repo
+          xrepo install -y cmake
+          xrepo install -y scnlib
+          xrepo export -o ./pkg
+        
+      - name: Build the target
+        run: |
+          xmake f -y -m debug
+          xmake -y -rv
+          cd ..
+          ls
+          zip -r test.zip test
+
+      - name: Upload artifacts
+        uses: 'actions/upload-artifact@v2'
+        with:
+          name: test.zip
+          path: test.zip

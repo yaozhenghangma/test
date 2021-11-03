@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/Users/mayaozhenghang/Project/test",
+  "arguments": ["/usr/bin/xcrun -sdk macosx clang", "-c", "-Qunused-arguments", "-arch", "x86_64", "-m64", "-std=c++17", "-o", "build/.objs/MMC/macosx/x86_64/src/test.cpp.o", "src/test.cpp"],
+  "file": "src/test.cpp"
+}]

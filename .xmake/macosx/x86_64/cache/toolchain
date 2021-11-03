@@ -1,0 +1,12 @@
+{
+    tool_target_MMC_macosx_x86_64_cxx = {
+        toolchain_info = {
+            arch = "x86_64",
+            cachekey = "xcode_arch_x86_64_plat_macosx",
+            plat = "macosx",
+            name = "xcode"
+        },
+        toolname = "clang",
+        program = "/usr/bin/xcrun -sdk macosx clang"
+    }
+}
