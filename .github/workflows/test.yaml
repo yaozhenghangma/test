@@ -32,3 +32,4 @@ jobs:
         run: |
           xmake l find_packages cmake::Boost
           xmake l find_packages cmake::MPI
+          xmake
