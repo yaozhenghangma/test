@@ -16,7 +16,7 @@ jobs:
       - name: install
         run: |
           brew install xmake
-          xmake update deb
+          xmake update dev
           brew install open-mpi
           brew install boost
           brew install boost-mpi
